@@ -79,6 +79,20 @@ access specifiers or visbility modes
 public -> protected -> default -> private
 
 
+8 primitive types in java
+----------------------------
+type	size	defaultvalue
+
+byte	1byte		0
+short	2bytes		0
+int	4bytes		0
+long	8bytes		0 
+float	4bytes		0.0000f
+double	8bytes		0.0000d(default)
+char	2bytes		'\u0000' (UNI-CODE char set)
+boolean	1byte		false
+
+
 1)Classes & Objects
 -------------------------------
 * a class is a reflection or a template or a blueprint of any real world object
