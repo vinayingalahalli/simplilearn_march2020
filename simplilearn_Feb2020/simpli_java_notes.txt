@@ -209,7 +209,7 @@ which has been written in any of parent(ancestors) will be given to
 child where child doesnt have to rewrite it but it has a power to modify it
 which will be covered in polymorphism.
 * Basically you can create the object for a child class and access all the 
-properties of a chils as well as its ancestors.
+properties of a child as well as its ancestors.
 * in java by default all the classes are subclass. i.e all the
 classes in java has a parent by default who is java.lang.Object which
 is super class of all the java classes.
@@ -261,6 +261,7 @@ b)RunTimePolymorphism(dynamic binding) -> here the objects are binded at the run
 		encounter with 2methods with same name and arg list in which
 		it will consider the Child method and ignores the parent
 		method, this is what is called as method overriding.
+		You cannot override private,static,final.
 
 
 Object Casting
@@ -329,7 +330,7 @@ a abstract class.
 
 
 
--> acheiving abstraction by creating interfaces(pure form of abstraction)
+-> acheiving abstraction by creating interfaces(pure form of abstraction until Java7)
 -------------------------------------------------------------------------
 *interfaces are also just like a abstract classes itself but they wont
 allow any sort of non abstract methods in it.
@@ -346,10 +347,13 @@ anonymous interface, and you can also extend a interface by other interface.
 * use implements keyword to implement any interface.
 there are types of interfaces
 1)Normal Interface -> interface with many abstract methods in it.
-2)Functional Interface -> Interface with only and only one abstract method.
-3)Marker Interface -> Interface with no abstract methods at all, which
+			Eg: Collection ,List, Set
+2)Functional Interface (java 8 Lambda Expression(->()))-> Interface with only and only one abstract method.
+			(SAM Interfaces) Eg: Comaparable, Comparator, Runnable
+			
+3)Marker Interface(abstract interfaces) -> Interface with no abstract methods at all, which
 		is used for compiler to mark that it does some job.
-
+			Eg: Serializable, Clonable
 
 Wrapper Classes
 ------------------------
