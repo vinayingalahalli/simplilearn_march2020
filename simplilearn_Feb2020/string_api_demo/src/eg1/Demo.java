@@ -41,6 +41,9 @@ public class Demo {
 			System.out.println(s4[i]+s4[i].length());
 		}
 		
+		String s5="good";
+		System.out.println(s5.substring(1));
+		System.out.println(s5.substring(1,3));
 		
 		
 		

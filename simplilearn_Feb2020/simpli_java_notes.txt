@@ -463,6 +463,11 @@ used to throw multpile exceptions at the method level to the calling method.
 use it to force the programmer who is creating the object for that
 method will handle it.
 
+What happens when Exception Occurs?
+jvm/jre -> create exception object with message and cause -- Step1
+
+jvm/jre -> looks up for handler(catch) to handle this exception -- Step2
+if catch is found pass the object to catch block and terminate gracefully else terminate abnormally
 
 3)throw
 ---------------
