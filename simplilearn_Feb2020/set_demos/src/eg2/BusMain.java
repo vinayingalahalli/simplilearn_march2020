@@ -1,5 +1,6 @@
 package eg2;
 
+import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -30,8 +31,12 @@ public class BusMain {
 		
 	}
 	public static void printBuses(Set<Bus> busList) {
-		for(Bus b:busList) {
-			System.out.println(b);
+//		for(Bus b:busList) {
+//			System.out.println(b);
+//		}
+		Iterator<Bus> i=busList.iterator();
+		while(i.hasNext()) {
+			System.out.println(i.next());
 		}
 		System.out.println("\n\n");
 	}
