@@ -19,6 +19,7 @@ public class Demo1 {
 		hs.add("jee");
 		hs.add("jse");
 		hs.add("jme");
+		
 		System.out.println(hs);
 		
 		Set<String> lhs=new LinkedHashSet<>();
