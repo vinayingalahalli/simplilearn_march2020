@@ -179,7 +179,7 @@ class or VO(Value Object) class or DTO(Data transfer Object) class or Model clas
 
 
 Inheritance(Code-Reusability)
--------------------------
+-----------------------------------
 *Inheritance talks about the code reusability.
 where the intial class for solving a particular problem which we 
 create is considered to be as a parent which would've given a solution
@@ -271,7 +271,7 @@ Child c=(Child)p; // Explicit
 
 final keyword
 --------------------
-* can be used at 3 levels
+* can be used at 3 levels/places
 *class level -> such classes cannot have child class.
 *method level -> such methods cannot be modified or cannot be overridden.
 * at variable or obj level -> it is called as constants which cannot be
@@ -332,9 +332,14 @@ anonymous interface, and you can also extend a interface by other interface.
 * use implements keyword to implement any interface.
 there are types of interfaces
 1)Normal Interface -> interface with many abstract methods in it.
-2)Functional Interface -> Interface with only and only one abstract method.
-3)Marker Interface -> Interface with no abstract methods at all, which
+			Eg : Collection, List, Set, Queue, Map
+2)Functional Interface(Functional Programming)(SAM interfaces) -> Interface with only and only 
+			one abstract method.
+			Eg : Runnable, Comparable, Comparator
+			@FunctionalInterface
+3)Marker Interface(Abstract Interfaces) -> Interface with no abstract methods at all, which
 		is used for compiler to mark that it does some job.
+			Eg: Serializable, Clonable
 
 
 Wrapper Classes
