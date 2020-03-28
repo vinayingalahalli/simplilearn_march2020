@@ -336,7 +336,7 @@ there are types of interfaces
 2)Functional Interface(Functional Programming)(SAM interfaces) -> Interface with only and only 
 			one abstract method.
 			Eg : Runnable, Comparable, Comparator
-			@FunctionalInterface
+			@FunctionalInterface(from Java 8)
 3)Marker Interface(Abstract Interfaces) -> Interface with no abstract methods at all, which
 		is used for compiler to mark that it does some job.
 			Eg: Serializable, Clonable
