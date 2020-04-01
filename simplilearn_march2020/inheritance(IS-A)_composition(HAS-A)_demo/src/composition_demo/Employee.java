@@ -2,18 +2,18 @@ package composition_demo;
 
 public class Employee extends Person {
 
-	private String organization;// Organization(oid,name,noofemps,location)
+	private Organization organization;// Organization(oid,name,noofemps,location)
 	private String designation;
 	
 	public Employee() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public String getOrganization() {
+	public Organization getOrganization() {
 		return organization;
 	}
 
-	public void setOrganization(String organization) {
+	public void setOrganization(Organization organization) {
 		this.organization = organization;
 	}
 
@@ -25,7 +25,7 @@ public class Employee extends Person {
 		this.designation = designation;
 	}
 
-	public Employee(int id, String name, String organization, String designation) {
+	public Employee(int id, String name, Organization organization, String designation) {
 		super(id, name);
 		this.organization = organization;
 		this.designation = designation;
@@ -34,7 +34,7 @@ public class Employee extends Person {
 	public void printEmployee() {
 		System.out.println("Printing employee details");
 		super.printPerson();
-		System.out.println("Org Name "+organization);
+		organization.printOrganization();
 		System.out.println("Designation "+designation);
 	}
 }
