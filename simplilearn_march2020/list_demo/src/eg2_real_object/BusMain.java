@@ -47,11 +47,21 @@ public class BusMain {
 
 		System.out.println("\n\nPrinting all buses sorted based on rating first and if same then by fare");
 		printBuses(busList);
+		double cost=1200;
+		System.out.println("\n\nPrinting all the buses whose cost is above "+cost);
+		for (int i = 0; i < busList.size(); i++) {
+			if(busList.get(i).getCost()>cost) {
+				System.out.println(busList.get(i));
+			}
+		}
 	}
 
 	public static void printBuses(List<Bus> busList) {
-		for (int i = 0; i < busList.size(); i++) {
-			System.out.println(busList.get(i));
+//		for (int i = 0; i < busList.size(); i++) {
+//			System.out.println(busList.get(i));
+//		}
+		for(Bus b:busList) {
+			System.out.println(b);
 		}
 	}
 
