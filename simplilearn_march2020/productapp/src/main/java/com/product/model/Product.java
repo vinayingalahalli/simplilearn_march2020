@@ -52,6 +52,14 @@ public class Product {
 		this.manufacturerName = manufacturerName;
 	}
 
+	public Product(String name, double cost, float rating, String manufacturerName) {
+		super();
+		this.name = name;
+		this.cost = cost;
+		this.rating = rating;
+		this.manufacturerName = manufacturerName;
+	}
+
 	public Product(int id, String name, double cost, float rating, String manufacturerName) {
 		super();
 		this.id = id;
