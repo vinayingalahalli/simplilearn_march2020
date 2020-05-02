@@ -93,3 +93,35 @@ end;
   TABLESPACE "USERS" ;
 
 
+//Product Table - schema name is ->Simplilearn change it accordingly for your own schema name 
+
+ CREATE TABLE "SIMPLILEARN"."PRODUCT" 
+   (	"ID" NUMBER NOT NULL ENABLE, 
+	"NAME" VARCHAR2(20 BYTE) NOT NULL ENABLE, 
+	"COST" NUMBER NOT NULL ENABLE, 
+	"RATING" NUMBER NOT NULL ENABLE, 
+	"MANUFACTURERNAME" VARCHAR2(20 BYTE) NOT NULL ENABLE, 
+	"UNIQUEID" VARCHAR2(20 BYTE) NOT NULL ENABLE, 
+	 CONSTRAINT "PRODUCT_PK" PRIMARY KEY ("ID")
+)
+
+//Product Sequence - execute this before you execute addproduct procedure
+   CREATE SEQUENCE  "SIMPLILEARN"."PRODUCT_SEQ"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 10020 CACHE 20 NOORDER  NOCYCLE ;
+
+
+CREATE OR REPLACE PROCEDURE ADDPRODUCT 
+(
+  V_ID OUT NUMBER 
+, V_NAME IN VARCHAR2 
+, V_COST IN NUMBER 
+, V_RATING IN NUMBER 
+, V_MANUFACTURERNAME IN VARCHAR2 
+, V_UNIQUEID OUT VARCHAR2 
+) AS 
+BEGIN
+  select PRODUCT_SEQ.nextval into V_ID from dual;
+  v_uniqueid:='PRO'||upper(substr(v_name,0,2))||upper(substr(v_manufacturername,0,3))||v_id;
+  insert into product(id,name,cost,rating,manufacturername,uniqueid) VALUES(v_id,V_name,v_cost,v_rating,v_manufacturername,v_uniqueid);
+END ADDPRODUCT;
+
+
