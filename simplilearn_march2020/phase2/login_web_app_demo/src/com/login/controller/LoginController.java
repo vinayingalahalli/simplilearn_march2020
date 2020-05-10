@@ -8,6 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.login.bo.LoginBO;
 import com.login.bo.impl.LoginBoImpl;
@@ -43,8 +44,11 @@ public class LoginController extends HttpServlet {
 		
 		try {
 			if(loginBO.isValidUser(user)) {
-				rd=request.getRequestDispatcher("success");
-				rd.forward(request, response);
+				HttpSession session=request.getSession();
+				//rd=request.getRequestDispatcher("success");
+				///rd.forward(request, response);
+				session.setAttribute("userid", user.getUserid());
+				response.sendRedirect("success");
 			}
 		} catch (BusinessException e) {
 			rd=request.getRequestDispatcher("login.html");
