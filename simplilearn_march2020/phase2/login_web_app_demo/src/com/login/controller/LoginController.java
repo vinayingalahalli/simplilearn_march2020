@@ -48,12 +48,15 @@ public class LoginController extends HttpServlet {
 				//rd=request.getRequestDispatcher("success");
 				///rd.forward(request, response);
 				session.setAttribute("userid", user.getUserid());
-				response.sendRedirect("success");
+			//	response.sendRedirect("success");
+				response.sendRedirect("success.jsp");
 			}
 		} catch (BusinessException e) {
-			rd=request.getRequestDispatcher("login.html");
-			rd.include(request, response); 
-			out.print("<center><span style='color:red;'>"+e.getMessage()+"</span></center>");
+			//rd=request.getRequestDispatcher("login.html");
+			//rd.include(request, response); 
+			//out.print("<center><span style='color:red;'>"+e.getMessage()+"</span></center>");
+			request.setAttribute("errorMessage", e.getMessage());
+			request.getRequestDispatcher("login.jsp").forward(request, response);
 		}
 	}
 
