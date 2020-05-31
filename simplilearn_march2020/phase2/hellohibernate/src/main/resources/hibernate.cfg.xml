@@ -16,5 +16,6 @@
 
 		<mapping class="com.hibernatedemo.model.Laptop" />
 		<mapping class="com.hibernatedemo.model.Customer" />
+		
 	</session-factory>
 </hibernate-configuration>
